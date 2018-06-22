@@ -1,5 +1,6 @@
 # AccessHook
 AccessHook is a process hacking library, written in C, for 64-bit Windows.
+
 Functions can be hooked by calling **`AccessHookAdd`**, and unhooked by calling **`AccessHookRemove`**.
 
 Using the macro **`HOOK_BYPASS`** allows calling the original function while skipping the hook.  Use this when calling the original function inside of a hook function.
