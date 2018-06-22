@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 ```
 
 ## Remarks
-AccessHook allows hooking without modifying bytecode inside of a process and can hook things inside processes without failing any code integrity checks. 
+__AccessHook does not modify bytecode inside of a process__, and can hook function calls without failing code integrity checks. 
 
 The only caveat, currently, is that the memory protection flags of hooked pages will be clearly marked as **`PAGE_READONLY`** rather than their intended values.  Some software only validates its own module's bytecode in the memory and not **ntdll.dll**; meaning the page protection can be disguised by merely hooking **`NtQueryVirtualMemory`**(not using AccessHook), and modifying its return.
 
